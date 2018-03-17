@@ -17,6 +17,9 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <title>Steam Key Extension</title>
 </head>
 
@@ -27,61 +30,81 @@
             <div class="nav-wrapper">
                 <a class="brand-logo center noselect">
                     <img id="logo" src="img/SteamLogo.png" alt="Steam Key Extension">
-                    <i id="logo-text" class="right grey-text">Key Extension</i>
+                    <i id="logo-text" class="right grey-text hide-on-small-only">Key Extension</i>
                 </a>
             </div>
         </nav>
     </div>
 
-    <!--Content Wrapper-->
-    <div id="content-wrapper" class="row">
-        <div class="col s8 offset-s2">
+    <main>
+        <!--Content Wrapper-->
+        <div id="content-wrapper" class="row">
+            <div class="col s8 offset-s2">
 
-            <!--Bot Name-->
-            <div class="row">
-                <div class="input-field col">
-                    <input id="bot-name" type="text" class="blue-text text-lighten-5">
-                    <label for="bot-name">Bot Name</label>
+                <!--Bot Name-->
+                <div class="row">
+                    <div class="input-field col">
+                        <input id="bot-name" type="text" class="blue-text text-lighten-5">
+                        <label for="bot-name">Bot 名</label>
+                    </div>
                 </div>
+
+                <!--Text Input Area-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="ske-input" class="materialize-textarea"></textarea>
+                        <label for="ske-input">输入</label>
+                    </div>
+                </div>
+
+                <!--Function Area-->
+                <div class="row">
+                    <!--Extract-->
+                    <div class="col s2 offset-s2">
+                        <a id="ske-extract" class="waves-effect waves-light btn">
+                            <i class="material-icons left">colorize</i>提取</a>
+                    </div>
+                    <!--Extract-->
+                    <div class="col s2">
+                        <a id="ske-copy" class="waves-effect waves-light btn">
+                            <i class="material-icons left">content_copy</i>复制</a>
+                    </div>
+                    <!--Export-->
+                    <div class="col s2">
+                        <a id="ske-export" class="waves-effect waves-light btn disabled">
+                            <i class="material-icons left">archive</i>导出</a>
+                    </div>
+                    <!--Clear-->
+                    <div class="col s2">
+                        <a id="ske-clear" class="waves-effect waves-light btn">
+                            <i class="material-icons left">clear_all</i>清空</a>
+                    </div>
+                </div>
+
+                <!--Text Output Area-->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="ske-output" class="materialize-textarea"></textarea>
+                        <label for="ske-output">输出</label>
+                    </div>
+                </div>
+
             </div>
-
-            <!--Text Input Area-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="ske-input" class="materialize-textarea"></textarea>
-                    <label for="ske-input">输入</label>
-                </div>
-            </div>
-
-            <!--Function Area-->
-            <div class="row">
-                <!--Extract-->
-                <div class="col s3 offset-s2">
-                    <a id="ske-extract" class="waves-effect waves-light btn">
-                        <i class="material-icons left">colorize</i>提取</a>
-                </div>
-                <!--Export-->
-                <div class="col s3">
-                    <a id="ske-export" class="waves-effect waves-light btn">
-                        <i class="material-icons left">archive</i>导出</a>
-                </div>
-                <!--Clear-->
-                <div class="col s3">
-                    <a id="ske-clear" class="waves-effect waves-light btn">
-                        <i class="material-icons left">clear_all</i>清空</a>
-                </div>
-            </div>
-
-            <!--Text Output Area-->
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="ske-output" class="materialize-textarea"></textarea>
-                    <label for="ske-output">输出</label>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </main>
+
+    <footer class="page-footer grey darken-4">
+        <div class="footer-copyright">
+            <div class="container">
+                Copyright © 2018
+                <a href="https://steamcommunity.com/profiles/76561198263380239/" target="_blank">Cloud</a>
+                <iframe class="right" allowtransparency="true" scrolling="no" frameborder="0" src="https://buttons.github.io/buttons.html#href=https://github.com/Cloud-Swift/SKE/fork&amp;title=&amp;aria-label=Fork%20SKE%20on%20GitHub&amp;data-icon=octicon-repo-forked&amp;data-text=Fork&amp;data-show-count=true"
+                    style="width: 80px; height: 20px; border: none;"></iframe>
+                <iframe class="right" allowtransparency="true" scrolling="no" frameborder="0" src="https://buttons.github.io/buttons.html#href=https://github.com/Cloud-Swift/SKE&amp;title=&amp;aria-label=Star%20SKE%20on%20GitHub&amp;data-icon=octicon-star&amp;data-text=Star&amp;data-show-count=true"
+                    style="width: 80px; height: 20px; border: none;"></iframe>
+            </div>
+        </div>
+    </footer>
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.js"></script>

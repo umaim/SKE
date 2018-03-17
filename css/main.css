@@ -1,5 +1,13 @@
 body {
     background: url("../img/Background.png");
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    min-width: 720px;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 #logo {
@@ -26,7 +34,8 @@ body {
     color: #eeeeee;
 }
 
-.input-field>input,.input-field>textarea {
+.input-field>input,
+.input-field>textarea {
     color: #e0e0e0;
 }
 
