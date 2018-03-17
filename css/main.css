@@ -1,0 +1,42 @@
+body {
+    background: url("../img/Background.png");
+}
+
+#logo {
+    padding-top: 10px;
+}
+
+#content-wrapper {
+    padding-top: 20px;
+}
+
+#logo-text {
+    font-size: 25px;
+}
+
+#ske-input {
+    min-height: 200px;
+}
+
+#ske-output {
+    min-height: 100px;
+}
+
+.input-field>label {
+    color: #eeeeee;
+}
+
+.input-field>input,.input-field>textarea {
+    color: #e0e0e0;
+}
+
+/*Can not be selected*/
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
