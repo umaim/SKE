@@ -1,12 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Github Page Test</title>
+    <!--Import Google Icon Font
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    -->
+    <!--Import Material Design Icons via self hosting-->
+    <link type="text/css" rel="stylesheet" href="css/material-icons.css" />
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+    <!--Costum Style-->
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steam Key Extension</title>
 </head>
+
 <body>
-    Nice! 😘
+    <!--Navbar-->
+    <div class="navbar-fixed">
+        <nav class="grey darken-4">
+            <div class="nav-wrapper">
+                <a class="brand-logo center noselect">
+                    <img id="logo" src="img/SteamLogo.png" alt="Steam Key Extension">
+                    <i id="logo-text" class="right grey-text">Key Extension</i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!--Content Wrapper-->
+    <div id="content-wrapper" class="row">
+        <div class="col s8 offset-s2">
+
+            <!--Bot Name-->
+            <div class="row">
+                <div class="input-field col">
+                    <input id="bot-name" type="text" class="blue-text text-lighten-5">
+                    <label for="bot-name">Bot Name</label>
+                </div>
+            </div>
+
+            <!--Text Input Area-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="ske-input" class="materialize-textarea"></textarea>
+                    <label for="ske-input">输入</label>
+                </div>
+            </div>
+
+            <!--Function Area-->
+            <div class="row">
+                <!--Extract-->
+                <div class="col s3 offset-s2">
+                    <a id="ske-extract" class="waves-effect waves-light btn">
+                        <i class="material-icons left">colorize</i>提取</a>
+                </div>
+                <!--Export-->
+                <div class="col s3">
+                    <a id="ske-export" class="waves-effect waves-light btn">
+                        <i class="material-icons left">archive</i>导出</a>
+                </div>
+                <!--Clear-->
+                <div class="col s3">
+                    <a id="ske-clear" class="waves-effect waves-light btn">
+                        <i class="material-icons left">clear_all</i>清空</a>
+                </div>
+            </div>
+
+            <!--Text Output Area-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="ske-output" class="materialize-textarea"></textarea>
+                    <label for="ske-output">输出</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
