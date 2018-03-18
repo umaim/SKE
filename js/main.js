@@ -13,11 +13,11 @@ btnExtract.onclick = () => {
 
     const keys = unique(txtInput.value.match(keyRegex));
     if (keys.length > 0) {
-        txtOutput.value = "!redeem " + txtBotName.value + " " + keys.join(",");
+        txtOutput.value = "!redeem " + (txtBotName.value==""?"":(txtBotName.value+" ")) + keys.join(",");
         txtOutput.focus();
     } else {
         M.toast({
-            html: '无 Steam Key！'
+            html: 'Keys not Found!'
         });
     }
     M.updateTextFields();
@@ -29,7 +29,7 @@ btnCopy.onclick = () => {
     txtOutput.select();
     document.execCommand("Copy");
     M.toast({
-        html: '已复制！'
+        html: 'Copied!'
     });
 }
 
@@ -41,6 +41,6 @@ btnClear.onclick = () => {
     M.textareaAutoResize(txtInput);
 
     M.toast({
-        html: '已清空！'
+        html: 'Cleared!'
     });
 }
