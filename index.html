@@ -22,6 +22,16 @@
     <link type="text/css" rel="stylesheet" href="css/app.css" />
     <!--Icon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SKE">
+    <link rel="apple-touch-icon" href="img/icons/icon-152x152.png">
+
+    <!-- Add to home screen for Windows -->
+    <meta name="msapplication-TileImage" content="img/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#212121">
 </head>
 
 <body>
@@ -107,17 +117,7 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--Main JS-->
     <script src="js/app.js"></script>
-    <!--For Service Worker-->
-    <script>
-        if (navigator.serviceWorker != null) {
-            navigator.serviceWorker.register("js/service-worker.js")
-                .then(function (registration) {
-                    console.log('Registered events at scope: ', registration.scope);
-                });
-        }
-    </script>
 </body>
 
 </html>
