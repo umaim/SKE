@@ -1,14 +1,14 @@
+body,
+html {
+    overflow-x: hidden;
+}
+
 body {
     background: url("../img/Background.png");
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     width: auto;
-}
-
-body,
-html {
-    overflow-x: hidden;
 }
 
 main {
