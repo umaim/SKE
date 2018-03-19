@@ -3,6 +3,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    width: 100%;
 }
 
 main {
@@ -22,11 +23,11 @@ main {
 }
 
 #ske-input {
-    min-height: 200px;
+    min-height: 25vh;
 }
 
 #ske-output {
-    min-height: 100px;
+    min-height: 10vh;
 }
 
 .input-field>label {
