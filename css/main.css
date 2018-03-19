@@ -6,6 +6,11 @@ body {
     width: auto;
 }
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 main {
     flex: 1 0 auto;
 }
