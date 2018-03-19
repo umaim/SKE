@@ -1,0 +1,13 @@
+{
+    "name": "Steam Key Extension",
+    "short_name": "SKE",
+    "display": "standalone",
+    "start_url": "/",
+    "theme_color": "#212121",
+    "background_color": "#212121",
+    "icons": [{
+        "src": "favicon.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+    }]
+}

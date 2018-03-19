@@ -10,6 +10,7 @@
     <meta name="Description" content="Steam Key Extension is a web-based tool which can help you extract and format your Steam Keys to ASF style.">
     <meta name="theme-color" content="#212121" />
 
+    <link rel="manifest" href="manifest.json" />
     <!--Import Google Icon Font
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     -->
@@ -18,7 +19,7 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <!--Costum Style-->
-    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <link type="text/css" rel="stylesheet" href="css/app.css" />
     <!--Icon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 </head>
@@ -106,7 +107,17 @@
 
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/main.js"></script>
+    <!--Main JS-->
+    <script src="js/app.js"></script>
+    <!--For Service Worker-->
+    <script>
+        if (navigator.serviceWorker != null) {
+            navigator.serviceWorker.register("js/service-worker.js")
+                .then(function (registration) {
+                    console.log('Registered events at scope: ', registration.scope);
+                });
+        }
+    </script>
 </body>
 
 </html>
