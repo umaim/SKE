@@ -36,59 +36,52 @@
         </nav>
     </div>
 
-    <main>
-        <!--Content Wrapper-->
-        <div id="content-wrapper" class="row">
-            <div class="col l8 m10 s12 offset-l2 offset-m1 offset-s0">
+    <main class="container">
+        <!--Bot Name-->
+        <div class="row">
+            <div class="input-field col l2 m3 s4">
+                <input id="bot-name" type="text" class="blue-text text-lighten-5">
+                <label for="bot-name">Bot Name</label>
+            </div>
+        </div>
 
-                <!--Bot Name-->
-                <div class="row">
-                    <div class="input-field col l2 m3 s4">
-                        <input id="bot-name" type="text" class="blue-text text-lighten-5">
-                        <label for="bot-name">Bot Name</label>
-                    </div>
-                </div>
+        <!--Text Input Area-->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="ske-input" class="materialize-textarea"></textarea>
+                <label for="ske-input">Input</label>
+            </div>
+        </div>
 
-                <!--Text Input Area-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="ske-input" class="materialize-textarea"></textarea>
-                        <label for="ske-input">Input</label>
-                    </div>
-                </div>
+        <!--Function Area-->
+        <div class="row">
+            <!--Extract-->
+            <div class="col l2 m3 s3 center offset-l2 offset-m0 offset-s0">
+                <a id="ske-extract" class="waves-effect waves-light btn truncate">
+                    <i class="material-icons left hide-on-med-and-down">colorize</i>Extract</a>
+            </div>
+            <!--Copy-->
+            <div class="col l2 m3 s3 offset-s1 center">
+                <a id="ske-copy" class="waves-effect waves-light btn truncate">
+                    <i class="material-icons left hide-on-med-and-down">content_copy</i>&nbsp;Copy&nbsp;</a>
+            </div>
+            <!--Export-->
+            <div class="col l2 m3 center hide-on-small-only">
+                <a id="ske-export" class="waves-effect waves-light btn truncate">
+                    <i class="material-icons left hide-on-med-and-down">archive</i>Export</a>
+            </div>
+            <!--Clear-->
+            <div class="col l2 m3 s3 offset-s1 center">
+                <a id="ske-clear" class="waves-effect waves-light btn truncate">
+                    <i class="material-icons left hide-on-med-and-down">clear_all</i>&nbsp;Clear&nbsp;</a>
+            </div>
+        </div>
 
-                <!--Function Area-->
-                <div class="row">
-                    <!--Extract-->
-                    <div class="col l2 m3 s3 center offset-l2 offset-m0 offset-s0">
-                        <a id="ske-extract" class="waves-effect waves-light btn truncate">
-                            <i class="material-icons left hide-on-med-and-down">colorize</i>Extract</a>
-                    </div>
-                    <!--Copy-->
-                    <div class="col l2 m3 s3 offset-s1 center">
-                        <a id="ske-copy" class="waves-effect waves-light btn truncate">
-                            <i class="material-icons left hide-on-med-and-down">content_copy</i>&nbsp;Copy&nbsp;</a>
-                    </div>
-                    <!--Export-->
-                    <div class="col l2 m3 center hide-on-small-only">
-                        <a id="ske-export" class="waves-effect waves-light btn truncate">
-                            <i class="material-icons left hide-on-med-and-down">archive</i>Export</a>
-                    </div>
-                    <!--Clear-->
-                    <div class="col l2 m3 s3 offset-s1 center">
-                        <a id="ske-clear" class="waves-effect waves-light btn truncate">
-                            <i class="material-icons left hide-on-med-and-down">clear_all</i>&nbsp;Clear&nbsp;</a>
-                    </div>
-                </div>
-
-                <!--Text Output Area-->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <textarea id="ske-output" class="materialize-textarea"></textarea>
-                        <label for="ske-output">Output</label>
-                    </div>
-                </div>
-
+        <!--Text Output Area-->
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="ske-output" class="materialize-textarea"></textarea>
+                <label for="ske-output">Output</label>
             </div>
         </div>
     </main>
