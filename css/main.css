@@ -3,11 +3,15 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    width: 100%;
+    width: auto;
 }
 
 main {
     flex: 1 0 auto;
+}
+
+img {
+    max-width: 100%;
 }
 
 #logo {
