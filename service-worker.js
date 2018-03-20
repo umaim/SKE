@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var cacheName = "ske-dev-v0.3";
+var cacheName = "ske-dev-v0.4";
 
 const filesToCache = [
     "/",
@@ -23,7 +23,7 @@ const filesToCache = [
     "/favicon.ico",
     "/manifest.json",
     "/img/Background.png",
-    "/img/SteamLogo.png",
+    "/img/Logo.png",
     "/css/app.css",
     "/css/materialize.min.css",
     "/css/material-icons.css",

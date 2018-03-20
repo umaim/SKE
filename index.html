@@ -54,12 +54,32 @@
 <body>
     <!--Navbar-->
     <div class="navbar-fixed">
+        <!-- Language Dropdown Structure -->
+        <ul id="ske-languages" class="dropdown-content">
+            <li>
+                <a id="ske-language-english" class="grey darken-3 white-text">English</a>
+            </li>
+            <li>
+                <a id="ske-language-schinese" class="grey darken-3 white-text">简体中文</a>
+            </li>
+            <li>
+                <a id="ske-language-tchinese" class="grey darken-3 white-text">繁體中文</a>
+            </li>
+        </ul>
         <nav class="grey darken-4">
             <div class="nav-wrapper">
                 <a class="brand-logo center noselect">
-                    <img id="logo" src="img/SteamLogo.png" alt="Steam">
-                    <i id="logo-text" class="right grey-text hide-on-med-and-down">Key Extension</i>
+                    <img id="logo" src="img/Logo.png" alt="Steam">
+                    <i id="logo-text" class="right grey-text hide-on-med-and-down">Steam Key Extension</i>
                 </a>
+                <ul class="right">
+                    <!-- Language Dropdown Trigger -->
+                    <li>
+                        <a class="dropdown-trigger grey-text" data-target="ske-languages">Languages
+                            <i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
@@ -68,8 +88,8 @@
         <!--Bot Name-->
         <div class="row">
             <div class="input-field col l2 m3 s4">
-                <input id="bot-name" type="text" class="blue-text text-lighten-5">
-                <label for="bot-name">Bot Name</label>
+                <input id="ske-bot-name" type="text" class="blue-text text-lighten-5">
+                <label id="ske-lbl-bot-name" for="bot-name">Bot Name</label>
             </div>
         </div>
 
@@ -77,7 +97,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="ske-input" class="materialize-textarea"></textarea>
-                <label for="ske-input">Input</label>
+                <label id="ske-lbl-input" for="ske-input">Input</label>
             </div>
         </div>
 
@@ -109,7 +129,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <textarea id="ske-output" class="materialize-textarea"></textarea>
-                <label for="ske-output">Output</label>
+                <label id="ske-lbl-output" for="ske-output">Output</label>
             </div>
         </div>
     </main>

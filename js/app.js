@@ -18,19 +18,112 @@
 (function () {
     "use strict";
 
-    const txtBotName = document.getElementById("bot-name");
+
+
+    const config = {
+        saveBotName: name => {
+            localStorage.skeBotName = name;
+        },
+        getBotName: () => {
+            return localStorage.skeBotName || "";
+        },
+        saveLanguage: language => {
+            localStorage.skeLanguage = language;
+        },
+        getLanguage: () => {
+            return localStorage.skeLanguage || "english";
+        },
+        refreshUI: text => {
+            lblBotName.innerText = text.botName;
+            lblInput.innerText = text.input;
+            btnExtract.innerHTML = `<i class="material-icons left hide-on-med-and-down">colorize</i>${text.extract}`;
+            btnCopy.innerHTML = `<i class="material-icons left hide-on-med-and-down">content_copy</i>${text.copy}`;
+            btnExport.innerHTML = `<i class="material-icons left hide-on-med-and-down">archive</i>${text.export}`;
+            btnClear.innerHTML = `<i class="material-icons left hide-on-med-and-down">clear_all</i>${text.clear}`;
+            lblOutput.innerText = text.output;
+        }
+    };
+
+    const i18n = {
+        schinese: {
+            botName: "Bot 名称",
+            input: "输入",
+            output: "输出",
+            extract: "提取",
+            copy: "复制",
+            export: "导出",
+            clear: "清空",
+            findXKeys: "找到%X%个Key",
+            keysNotFound: "未找到Key",
+            copied: "已复制",
+            cleared: "已清空"
+        },
+        tchinese: {
+            botName: "Bot 名稱",
+            input: "輸入",
+            output: "輸出",
+            extract: "提取",
+            copy: "複製",
+            export: "導出",
+            clear: "清空",
+            findXKeys: "找到%X%個Key",
+            keysNotFound: "未找到Key",
+            copied: "已復制",
+            cleared: "已清空"
+        },
+        english: {
+            botName: "Bot Name",
+            input: "Input",
+            output: "Output",
+            extract: "Extract",
+            copy: "Copy",
+            export: "Export",
+            clear: "Clear",
+            findXKeys: "Found %X% Keys",
+            keysNotFound: "Keys not Found",
+            copied: "Copied",
+            cleared: "Cleared"
+        }
+        /* for more languages
+        ,{
+            botName: "",
+            input: "",
+            output: "",
+            extract: "",
+            copy: "",
+            export: "",
+            clear: "",
+            findXKeys: "",
+            keysNotFound: "",
+            copied: "",
+            cleared: ""
+        }*/
+    };
+    let text = i18n[config.getLanguage()];
+
+    const txtBotName = document.getElementById("ske-bot-name");
     const txtInput = document.getElementById("ske-input");
     const btnExtract = document.getElementById("ske-extract");
     const btnCopy = document.getElementById("ske-copy");
     const btnExport = document.getElementById("ske-export");
     const btnClear = document.getElementById("ske-clear");
     const txtOutput = document.getElementById("ske-output");
-
-    var botName = getBotName() || "";
-    txtBotName.value = botName;
-
+    const lblBotName = document.getElementById("ske-lbl-bot-name");
+    const lblInput = document.getElementById("ske-lbl-input");
+    const lblOutput = document.getElementById("ske-lbl-output");
+    const btnEnglish = document.getElementById("ske-language-english");
+    const btnSChinese = document.getElementById("ske-language-schinese");
+    const btnTChinese = document.getElementById("ske-language-tchinese");
     const keyRegex = /(?:(?:([A-Z0-9])(?!\1{4})){5}-){2,5}[A-Z0-9]{5}/g;
     const unique = a => [...new Set(a)];
+
+    var dropdown = document.querySelector(".dropdown-trigger");
+    M.Dropdown.init(dropdown, {
+        alignment: "right"
+    });
+
+    config.refreshUI(text);
+    txtBotName.value = config.getBotName();
 
     // Extract Keys from input textarea
     btnExtract.onclick = () => {
@@ -39,18 +132,18 @@
         const keys = unique(txtInput.value.match(keyRegex));
         if (keys.length > 0) {
             M.toast({
-                html: `Found ${keys.length} Keys!`
+                html: text.findXKeys.replace("%X%", keys.length)
             });
 
             txtOutput.value = `!redeem ${(txtBotName.value && txtBotName.value + " ")}${keys.join(",")}`;
             txtOutput.focus();
         } else {
             M.toast({
-                html: "Keys not Found!"
+                html: text.keysNotFound
             });
         }
 
-        saveBotName(txtBotName.value);
+        config.saveBotName(txtBotName.value);
 
         M.updateTextFields();
         M.textareaAutoResize(txtOutput);
@@ -62,7 +155,7 @@
         txtOutput.select();
         document.execCommand("Copy");
         M.toast({
-            html: "Copied!"
+            html: text.copied
         });
     };
 
@@ -154,10 +247,10 @@
             } // end while.
         } else {
             M.toast({
-                html: "Keys not Found!"
+                html: text.keysNotFound
             });
         }
-        saveBotName(txtBotName.value);
+        config.saveBotName(txtBotName.value);
         exportKeysWithTitle(keysWithTitles);
     };
 
@@ -170,8 +263,26 @@
         M.textareaAutoResize(txtInput);
 
         M.toast({
-            html: "Cleared!"
+            html: text.cleared
         });
+    };
+
+    btnEnglish.onclick = () => {
+        config.saveLanguage("english");
+        text = i18n["english"];
+        config.refreshUI(text);
+    };
+
+    btnSChinese.onclick = () => {
+        config.saveLanguage("schinese");
+        text = i18n["schinese"];
+        config.refreshUI(text);
+    };
+
+    btnTChinese.onclick = () => {
+        config.saveLanguage("tchinese");
+        text = i18n["tchinese"];
+        config.refreshUI(text);
     };
 
     // Register Service Worker
@@ -183,14 +294,6 @@
             // registration failed :(
             // console.log("ServiceWorker registration failed: ", err);
         });
-    }
-
-    function saveBotName(name) {
-        localStorage.skeBotName = name;
-    }
-
-    function getBotName() {
-        return localStorage.skeBotName;
     }
 
     // Date Format
