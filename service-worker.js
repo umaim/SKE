@@ -1,6 +1,6 @@
-var cacheName = "ske-dev-v0.2";
+var cacheName = "ske-dev-v0.3";
 
-var filesToCache = [
+const filesToCache = [
     "/",
     "/index.html",
     "/favicon.ico",
