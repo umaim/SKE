@@ -26,6 +26,9 @@
     const btnClear = document.getElementById("ske-clear");
     const txtOutput = document.getElementById("ske-output");
 
+    var botName = getBotName() || "";
+    txtBotName.value = botName;
+
     const keyRegex = /(?:(?:([A-Z0-9])(?!\1{4})){5}-){2,5}[A-Z0-9]{5}/g;
     const unique = a => [...new Set(a)];
 
@@ -46,6 +49,9 @@
                 html: "Keys not Found!"
             });
         }
+
+        saveBotName(txtBotName.value);
+
         M.updateTextFields();
         M.textareaAutoResize(txtOutput);
         M.textareaAutoResize(txtInput);
@@ -151,6 +157,7 @@
                 html: "Keys not Found!"
             });
         }
+        saveBotName(txtBotName.value);
         exportKeysWithTitle(keysWithTitles);
     };
 
@@ -176,6 +183,14 @@
             // registration failed :(
             // console.log("ServiceWorker registration failed: ", err);
         });
+    }
+
+    function saveBotName(name) {
+        localStorage.skeBotName = name;
+    }
+
+    function getBotName() {
+        return localStorage.skeBotName;
     }
 
     // Date Format
