@@ -18,8 +18,6 @@
 (function () {
     "use strict";
 
-
-
     const config = {
         saveBotName: name => {
             localStorage.skeBotName = name;
@@ -34,18 +32,24 @@
             return localStorage.skeLanguage || "english";
         },
         refreshUI: text => {
+            dropLanguage.innerHTML = `${text.language}<i class="material-icons right">arrow_drop_down</i>`;
             lblBotName.innerText = text.botName;
             lblInput.innerText = text.input;
             btnExtract.innerHTML = `<i class="material-icons left hide-on-med-and-down">colorize</i>${text.extract}`;
+            btnExtract.setAttribute("data-tooltip", text.extract);
             btnCopy.innerHTML = `<i class="material-icons left hide-on-med-and-down">content_copy</i>${text.copy}`;
+            btnCopy.setAttribute("data-tooltip", text.copy);
             btnExport.innerHTML = `<i class="material-icons left hide-on-med-and-down">archive</i>${text.export}`;
+            btnExport.setAttribute("data-tooltip", text.export);
             btnClear.innerHTML = `<i class="material-icons left hide-on-med-and-down">clear_all</i>${text.clear}`;
+            btnClear.setAttribute("data-tooltip", text.clear);
             lblOutput.innerText = text.output;
         }
     };
 
     const i18n = {
         schinese: {
+            language: "简体中文",
             botName: "Bot 名称",
             input: "输入",
             output: "输出",
@@ -59,6 +63,7 @@
             cleared: "已清空"
         },
         tchinese: {
+            language: "繁體中文",
             botName: "Bot 名稱",
             input: "輸入",
             output: "輸出",
@@ -72,6 +77,7 @@
             cleared: "已清空"
         },
         english: {
+            language: "English",
             botName: "Bot Name",
             input: "Input",
             output: "Output",
@@ -83,6 +89,20 @@
             keysNotFound: "Keys not Found",
             copied: "Copied",
             cleared: "Cleared"
+        },
+        russian: {
+            language: "русский",
+            botName: "название Bot",
+            input: "Вход",
+            output: "Выход",
+            extract: "ИЗВЛЕКАТЬ",
+            copy: "КОПИРОВАТЬ",
+            export: "ЭКСПОРТИРОВАТЬ",
+            clear: "УДАЛИТЬ",
+            findXKeys: "%X% ключей нашли",
+            keysNotFound: "Ключи не нашли",
+            copied: "Скопированы",
+            cleared: "Очищены"
         }
         /* for more languages
         ,{
@@ -99,7 +119,6 @@
             cleared: ""
         }*/
     };
-    let text = i18n[config.getLanguage()];
 
     const txtBotName = document.getElementById("ske-bot-name");
     const txtInput = document.getElementById("ske-input");
@@ -111,17 +130,27 @@
     const lblBotName = document.getElementById("ske-lbl-bot-name");
     const lblInput = document.getElementById("ske-lbl-input");
     const lblOutput = document.getElementById("ske-lbl-output");
+    const dropLanguage = document.getElementById("ske-language-trigger");
     const btnEnglish = document.getElementById("ske-language-english");
     const btnSChinese = document.getElementById("ske-language-schinese");
     const btnTChinese = document.getElementById("ske-language-tchinese");
+    const btnRussian = document.getElementById("ske-language-russian");
     const keyRegex = /(?:(?:([A-Z0-9])(?!\1{4})){5}-){2,5}[A-Z0-9]{5}/g;
     const unique = a => [...new Set(a)];
 
-    var dropdown = document.querySelector(".dropdown-trigger");
-    M.Dropdown.init(dropdown, {
+    M.Dropdown.init(dropLanguage, {
         alignment: "right"
     });
 
+    var elems = document.querySelectorAll(".tooltipped");
+    for (let i = 0; i < elems.length; i++) {
+        M.Tooltip.init(elems[i], {
+            enterDelay: 600
+        });
+    }
+
+
+    let text = i18n[config.getLanguage()];
     config.refreshUI(text);
     txtBotName.value = config.getBotName();
 
@@ -284,6 +313,12 @@
     btnTChinese.onclick = () => {
         config.saveLanguage("tchinese");
         text = i18n["tchinese"];
+        config.refreshUI(text);
+    };
+
+    btnRussian.onclick = () => {
+        config.saveLanguage("russian");
+        text = i18n["russian"];
         config.refreshUI(text);
     };
 
