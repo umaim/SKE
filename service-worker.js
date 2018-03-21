@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-var cacheName = "ske-dev-v0.4";
+var cacheName = "ske-public-v1.0";
 
 const filesToCache = [
     "/",
