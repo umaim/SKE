@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    background: url("../img/Background.png");
+    background: url("../img/Background.jpg");
     display: flex;
     min-height: 100vh;
     flex-direction: column;
