@@ -76,9 +76,9 @@
             input: "Input",
             output: "Output",
             extract: "Extract",
-            copy: "Copy",
+            copy: "&nbsp;&nbsp;Copy&nbsp;&nbsp;&nbsp;",
             export: "Export",
-            clear: "Clear",
+            clear: "&nbsp;&nbsp;Clear&nbsp;&nbsp;",
             findXKeys: "Found %X% Keys",
             keysNotFound: "Keys not Found",
             copied: "Copied",
@@ -172,7 +172,7 @@
             formattedData = `Game,Key\r\n${formattedData}`;
 
             btnExport.setAttribute("download", `${fileName}.csv`);
-            btnExport.setAttribute("type","text/csv");
+            btnExport.setAttribute("type", "text/csv");
             btnExport.setAttribute("href", `data:text/csv;charset=utf-8,\ufeff${encodeURIComponent(formattedData)}`);
 
         }
