@@ -23,9 +23,20 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Steam Key Extension</title>
     <meta name="Description" content="Steam Key Extension is a web-based tool which can help you extract and format your Steam Keys to ASF style.">
     <meta name="theme-color" content="#212121" />
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="SKE">
+    <link rel="apple-touch-icon" href="img/icons/icon-152x152.png">
+
+    <!-- Add to home screen for Windows -->
+    <meta name="msapplication-TileImage" content="img/icons/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#212121">
+
+    <title>Steam Key Extension</title>
 
     <link rel="manifest" href="manifest.json" />
     <!--Import Google Icon Font
@@ -40,15 +51,6 @@
     <!--Icon-->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-    <!-- Add to home screen for Safari on iOS -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="SKE">
-    <link rel="apple-touch-icon" href="img/icons/icon-152x152.png">
-
-    <!-- Add to home screen for Windows -->
-    <meta name="msapplication-TileImage" content="img/icons/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#212121">
 </head>
 
 <body>
@@ -89,7 +91,7 @@
         <div class="row">
             <div class="input-field col l2 m3 s4">
                 <input id="ske-bot-name" type="text" class="blue-text text-lighten-5">
-                <label id="ske-lbl-bot-name" for="bot-name">Bot Name</label>
+                <label id="ske-lbl-bot-name" for="ske-bot-name">Bot Name</label>
             </div>
         </div>
 

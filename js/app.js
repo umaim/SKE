@@ -171,8 +171,10 @@
             }
             formattedData = `Game,Key\r\n${formattedData}`;
 
-            btnExport.setAttribute("href", `data:text/csv;charset=utf-8,\ufeff${encodeURIComponent(formattedData)}`);
             btnExport.setAttribute("download", `${fileName}.csv`);
+            btnExport.setAttribute("type","text/csv");
+            btnExport.setAttribute("href", `data:text/csv;charset=utf-8,\ufeff${encodeURIComponent(formattedData)}`);
+
         }
     }
 
