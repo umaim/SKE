@@ -36,10 +36,10 @@
 
 These feature need broswer support.(Chrome version 64+,latest Firefox/Opera/Safari/Microsoft Edge)
 
-1. Open [chrome://flags](chrome://flags/#enable-desktop-pwas), Enable "Desktop PWAs".(Note: Chrome will restart.)
+1. Open Chrome Flags(chrome://flags/#enable-desktop-pwas), Enable "Desktop PWAs".(Note: Chrome will restart.)
 2. Open [SKE](https://ske.cloudswift.me), then click "Customize and control Google Chrome" and select "Install to desktop..."
 3. Well done! Now, you can use it offline.
-4. You can open it via [Chrome Apps](chrome://apps) or Windows Start Menu.
+4. You can open it via Chrome Apps(chrome://apps) or Windows Start Menu.
 
 ### Install to Desktop by Chrome Demo
 
@@ -53,7 +53,13 @@ Add it, then you can find it in launcher and use it like native apps.
 
 ## Unstall
 
-Open [Chrome Apps](chrome://apps) -> right-click the icon -> Remove from Chrome.
+Open Chrome Apps(chrome://apps) -> right-click the icon -> Remove from Chrome.
+
+## Privacy Policy
+
+This is a full static site, and there is no third-part server. Nobody can get your infomation and the text you type.
+
+This site is open source based on the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0), and anyone can view the source code of this site here.
 
 ## To be continue
 
