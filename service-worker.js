@@ -22,7 +22,7 @@ const filesToCache = [
     "/index.html",
     "/favicon.ico",
     "/manifest.json",
-    "/img/Background.png",
+    "/img/Background.jpg",
     "/img/Logo.png",
     "/css/app.css",
     "/css/materialize.min.css",
