@@ -258,6 +258,14 @@
                                 keysWithTitles[key] = title;
                                 isFoundKey = false;
                             }
+                        } else if (line.indexOf("激活码:") > -1) {
+                            // Agiso DaShu2
+                            let words = line.split("激活码:");
+                            if (words.length > 1) {
+                                title = words[0].trim();
+                                keysWithTitles[key] = title;
+                                isFoundKey = false;
+                            }
                         }
                     }
                 } else if (isFoundKey) {
