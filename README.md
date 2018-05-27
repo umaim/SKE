@@ -63,4 +63,4 @@ This site is open source based on the [Apache License 2.0](http://www.apache.org
 
 ## To be continue
 
-If you have any problems in use, feel free issue an issue.
+If you have any problems in use, feel free leave a message in [issue page](https://github.com/Cloud-Swift/SKE/issues).
