@@ -266,6 +266,14 @@
                                 keysWithTitles[key] = title;
                                 isFoundKey = false;
                             }
+                        } else if (line.indexOf('【Key】') === -1 && line.indexOf('【') === 0 && line.indexOf('】') > 0) {
+                            // 楼下小卖铺 Support
+                            let words = line.substr(1).split('】');
+                            if (words.length > 1) {
+                                title = words[0].trim();
+                                keysWithTitles[key] = title;
+                                isFoundKey = false;
+                            }
                         }
                     }
                 } else if (isFoundKey) {
