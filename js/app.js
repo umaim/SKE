@@ -135,6 +135,7 @@
     const btnSChinese = document.getElementById('ske-language-schinese');
     const btnTChinese = document.getElementById('ske-language-tchinese');
     const btnRussian = document.getElementById('ske-language-russian');
+
     const keyRegex = /(?:(?:([A-Z0-9])(?!\1{4})){5}-){2,5}[A-Z0-9]{5}/g;
     const unique = a => [...new Set(a)];
 
@@ -337,6 +338,10 @@
         text = i18n['russian'];
         config.refreshUI(text);
     };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        M.Modal.init(document.querySelectorAll('.modal'), {});
+    });
 
     // Register Service Worker
     if ('serviceWorker' in navigator) {
