@@ -74,6 +74,10 @@ img {
     color: #e0e0e0;
 }
 
+.fixed-action-btn {
+    bottom: 60px;
+}
+
 /*Can not be selected*/
 
 .noselect {
