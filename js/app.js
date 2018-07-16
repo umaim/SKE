@@ -339,9 +339,14 @@
         config.refreshUI(text);
     };
 
-    document.addEventListener('DOMContentLoaded', function () {
-        M.Modal.init(document.querySelectorAll('.modal'), {});
-    });
+    if (new Date(Date.now()) > new Date('2018-10-25')) {
+        document.getElementsByClassName('fixed-action-btn').item(0).remove();
+        document.getElementById('ske-anno-modal').remove();
+    } else {
+        document.addEventListener('DOMContentLoaded', function () {
+            M.Modal.init(document.querySelectorAll('.modal'), {});
+        });
+    }
 
     // Register Service Worker
     if ('serviceWorker' in navigator) {
