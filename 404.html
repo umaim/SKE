@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>404 Candies Not Found</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    body {
+      margin: 0;
+      background: #263238;
+    }
+
+    .line {
+      position: fixed;
+      width: 550px;
+      height: 2px;
+      background: #90A4AE;
+      left: calc(50vw - 275px);
+      top: calc(50vh + 73px);
+    }
+
+    .bowl {
+      background: #CFD8DC;
+      position: fixed;
+      width: 100px;
+      height: 45px;
+      border-radius: 5px 5px 50px 50px;
+      left: calc(50vw - 25px);
+      top: calc(50vh + 19px);
+      border: 4px solid #161c1f;
+      box-shadow: inset -5px 0 0 rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .signwood {
+      background: #5D4037;
+      position: fixed;
+      width: 17px;
+      height: 150px;
+      border-radius: 5px;
+      left: calc(50vw - 80px);
+      top: calc(50vh - 83px);
+      border-top: 4px solid #3E2723;
+      border-left: 4px solid #3E2723;
+      border-bottom: 4px solid transparent;
+      border-right: 4px solid #3E2723;
+      box-shadow: inset -4px 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .signtext {
+      background: #8a6b47;
+      position: fixed;
+      width: 125px;
+      height: 60px;
+      border-radius: 5px;
+      left: calc(50vw - 147px);
+      top: calc(50vh - 87px);
+      transform: rotate(-15deg);
+      transform-origin: 60% 0%;
+      border: 4px solid #58442d;
+      transition: transform 0.3s ease;
+    }
+
+    .signtext:hover {
+      transform: rotate(-20deg);
+    }
+
+    .signtext>p {
+      text-align: center;
+      margin: 10px 0px 0px 0px;
+      padding: 0;
+      font-weight: bold;
+      font-size: 13px;
+      font-family: Roboto Slab;
+      color: rgba(0, 0, 0, 0.8);
+    }
+
+    .pin {
+      width: 5px;
+      height: 5px;
+      position: fixed;
+      background: #9E9E9E;
+      border: 1px solid #424242;
+      border-radius: 100%;
+      left: calc(50vw - 70px);
+      top: calc(50vh - 79px);
+    }
+
+    .spider {
+      width: 10px;
+      height: 10px;
+      background: #161c1f;
+      position: absolute;
+      border-radius: 100%;
+      left: 25px;
+      top: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .leg {
+      width: 5px;
+      height: 1px;
+      position: abolute;
+      background: #161c1f;
+    }
+
+    .left-1 {
+      margin-left: -4px;
+      transform: rotate(15deg);
+      margin-top: 1px;
+    }
+
+    .left-2 {
+      margin-left: -4px;
+      transform: rotate(0deg);
+      margin-top: 2px;
+    }
+
+    .left-3 {
+      margin-left: -4px;
+      transform: rotate(-15deg);
+      margin-top: 2px;
+    }
+
+    .right-1 {
+      margin-left: 8px;
+      transform: rotate(-15deg);
+      margin-top: -6px;
+    }
+
+    .right-2 {
+      margin-left: 8px;
+      transform: rotate(0deg);
+      margin-top: 2px;
+    }
+
+    .right-3 {
+      margin-left: 8px;
+      transform: rotate(15deg);
+      margin-top: 2px;
+    }
+
+    .spdline {
+      position: absolute;
+      background: #161c1f;
+      width: 1px;
+      height: 20px;
+      left: 30px;
+    }
+
+    .bowl:hover>.spider {
+      transform: translate(0, 5px);
+    }
+
+    .bowl:hover+.ghost {
+      transform: translate(0, -15px);
+      opacity: 1;
+    }
+
+    .ghost:hover {
+      transform: translate(0, -15px);
+      opacity: 1;
+    }
+
+    .ghost {
+      position: fixed;
+      height: 65px;
+      width: 50px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 100px 100px 5px 5px;
+      left: 15px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      left: calc(50vw + 17px);
+      top: calc(50vh - 12px);
+      opacity: 0.25;
+      z-index: -50;
+      box-shadow: inset -5px 0 0 rgba(0, 0, 0, 0.07);
+      transition: opacity 0.5s ease, transform 0.3s ease;
+    }
+
+    .eye {
+      position: absolute;
+      width: 7px;
+      height: 10px;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .eye-left {
+      left: 14px;
+      top: 15pX;
+    }
+
+    .eye-right {
+      left: 28px;
+      top: 15pX;
+    }
+
+    .mouth {
+      position: absolute;
+      width: 20px;
+      height: 13px;
+      border-radius: 100%;
+      background: rgba(255, 255, 255, 0);
+      top: 21px;
+      left: 14px;
+      border-left: 2px solid transparent;
+      border-right: 2px solid transparent;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid #c9ccce;
+    }
+
+    .chocolate {
+      position: absolute;
+      width: 4px;
+      height: 7px;
+      border-radius: 0px 0px 100% 100%;
+      background: #5D4037;
+      right: 15px;
+      top: 35px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="bowl">
+    <div class="spdline"></div>
+    <div class="spider">
+      <div class="leg left-1"></div>
+      <div class="leg left-2"></div>
+      <div class="leg left-3"></div>
+      <div class="leg right-1"></div>
+      <div class="leg right-2"></div>
+      <div class="leg right-3"></div>
+    </div>
+  </div>
+
+  <div class="ghost">
+    <div class="eye eye-left"></div>
+    <div class="eye eye-right"></div>
+    <div class="chocolate"></div>
+    <div class="mouth"></div>
+  </div>
+
+  <div class="signwood"></div>
+
+  <div class="signtext">
+    <p>404
+      <br/>Candies not found</p>
+  </div>
+
+  <div class="pin"></div>
+
+  <div class="line"></div>
+</body>
+
+</html>
