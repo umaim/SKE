@@ -1,7 +1,5 @@
 # Steam Key Extension
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1ca8cd84582e4bee82273eea184873e8)](https://app.codacy.com/app/cloudswift/SKE?utm_source=github.com&utm_medium=referral&utm_content=Cloud-Swift/SKE&utm_campaign=badger)
-
 ## Description
 
 [Steam Key Extension](https://ske.pixv.io) is a web-based tool which can help you extract and format your Steam Keys to ASF `!redeem` style. Also it can export your Keys to [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file with game titles.
