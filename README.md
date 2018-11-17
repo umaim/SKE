@@ -32,6 +32,12 @@
 
 ![Export Keys with Titles Demo](resources/ExportKeysWithTitlesDemo.gif)
 
+### Export Keys from ASF output
+
+Only export AlreadyPurchased Keys
+
+![Export Keys from ASF output Demo](resources/AlreadyPurchased.gif)
+
 ## Use it offline
 
 These feature need broswer support.(Chrome version 64+,latest Firefox/Opera/Safari/Microsoft Edge)
