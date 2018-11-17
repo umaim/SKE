@@ -214,9 +214,12 @@
                     if (key.length == line.length) {
                         // Key only, no other characters. Try to find title in other lines.
                     } else {
-                        if (line.indexOf('ASF格式：') > -1 || line.indexOf('!redeem') > -1) {
+                        if (line.indexOf('ASF格式：') > -1 || line.indexOf('!redeem') > -1 || line.indexOf('Unused keys: ') > -1 || line.indexOf('Status: OK/NoDetail') > -1 || line.indexOf('Status: Fail/BadActivationCode') > -1) {
                             // next line
+                            delete keysWithTitles[key];
+                            isFoundKey = false;
                             line = lines.pop();
+                            continue;
                         }
                         if (line.indexOf('\tSTEAM\t') > -1) {
                             // DIG support.
@@ -255,6 +258,14 @@
                             let words = line.substr(1).split('】');
                             if (words.length > 1) {
                                 title = words[0].trim();
+                                keysWithTitles[key] = title;
+                                isFoundKey = false;
+                            }
+                        } else if(line.indexOf('Status: Fail/AlreadyPurchased') > -1){
+                            // ASF AlreadyPurchased
+                            let words = line.match(/Key: (\w{5}-\w{5}-\w{5}) \| Status: Fail\/AlreadyPurchased \| Items: \[\d+, (.*)]$/);
+                            if(words.length > 1) {
+                                title = words[2];
                                 keysWithTitles[key] = title;
                                 isFoundKey = false;
                             }
