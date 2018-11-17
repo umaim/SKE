@@ -59,8 +59,8 @@ Open Chrome Apps(chrome://apps) -> right-click the icon -> Remove from Chrome.
 
 This is a full static site, and there is no third-part server. Nobody can get your infomation and the text you type.
 
-This site is open source based on the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0), and anyone can view the source code of this site here.
+This site is open source based on the MIT License, and anyone can view the source code of this site here.
 
 ## Feedback
 
-If you have any problems in use, feel free to leave a message in [issue page](https://github.com/Cloud-Swift/SKE/issues).
+If you have any problems in use, feel free to leave a message in [issue page](https://github.com/PixvIO/SKE/issues).
