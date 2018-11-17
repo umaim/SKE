@@ -180,7 +180,7 @@
             const fileName = `Export Keys ${new Date().Format('yyyy-MM-dd hh:mm:ss')}`;
             let formattedData = '';
             for (let key in data) {
-                formattedData = `${data[key]},${key}\r\n${formattedData}`;
+                formattedData = `${data[key].replace(/,/g, '')},${key}\r\n${formattedData}`;
             }
             formattedData = `Game,Key\r\n${formattedData}`;
 
