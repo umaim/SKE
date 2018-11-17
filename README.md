@@ -2,12 +2,12 @@
 
 ## Description
 
-[Steam Key Extension](https://ske.pixv.io) is a web-based tool which can help you extract and format your Steam Keys to ASF `!redeem` style. Also it can export your Keys to [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file with game titles.
+[Steam Key Extension](https://ske.pixv.io) is a web-based tool which can help you extract and format your Steam Keys to [ASF](https://github.com/JustArchiNET/ArchiSteamFarm) `!redeem` style. Also it can export your Keys to [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file with game titles.
 
 ## Core Features
 
 - Extract your keys from a large number of text.
-- Format keys into [ASF](https://github.com/JustArchi/ArchiSteamFarm) `!redeem` style.
+- Format keys into [ASF](https://github.com/JustArchiNET/ArchiSteamFarm) `!redeem` style.
 - Export Keys to csv file with game titles.
 - Full [PWA](https://developers.google.com/web/progressive-web-apps/) (Progressive Web Apps).
 - Can use offline.
