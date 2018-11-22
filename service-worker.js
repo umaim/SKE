@@ -1,4 +1,4 @@
-var cacheName = 'ske-public-v1.6.5';
+var cacheName = 'ske-public-v1.6.6';
 
 const filesToCache = [
     '/',
