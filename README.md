@@ -2,7 +2,7 @@
 
 ## Description
 
-[Steam Key Extension](https://ske.pixv.io) is a web-based tool which can help you extract and format your Steam Keys to [ASF](https://github.com/JustArchiNET/ArchiSteamFarm) `!redeem` style. Also it can export your Keys to [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file with game titles.
+[Steam Key Extension](https://ske.xpixv.com) is a web-based tool which can help you extract and format your Steam Keys to [ASF](https://github.com/JustArchiNET/ArchiSteamFarm) `!redeem` style. Also it can export your Keys to [csv](https://en.wikipedia.org/wiki/Comma-separated_values) file with game titles.
 
 ## Core Features
 
@@ -16,7 +16,7 @@
 
 ## How to use
 
-- Just open [https://ske.pixv.io](https://ske.pixv.io) in your loved browser.
+- Just open [https://ske.xpixv.com](https://ske.xpixv.com) in your loved browser.
 - Input your Bot Name.(optional)
 - Copy your text to "Input" textarea
 - Clicking "Extract" button will extract your keys to "Output" textarea into ASF `!redeem` format.
@@ -43,7 +43,7 @@ Only export AlreadyPurchased Keys
 These feature need broswer support.(Chrome version 64+,latest Firefox/Opera/Safari/Microsoft Edge)
 
 1. Open Chrome Flags(chrome://flags/#enable-desktop-pwas), Enable "Desktop PWAs".(Note: Chrome will restart.)
-2. Open [SKE](https://ske.pixv.io), then click "Customize and control Google Chrome" and select "Install to desktop..."
+2. Open [SKE](https://ske.xpixv.com), then click "Customize and control Google Chrome" and select "Install to desktop..."
 3. Well done! Now, you can use it offline.
 4. You can open it via Chrome Apps(chrome://apps) or Windows Start Menu.
 
@@ -69,4 +69,4 @@ This site is open source based on the MIT License, and anyone can view the sourc
 
 ## Feedback
 
-If you have any problems in use, feel free to leave a message in [issue page](https://github.com/PixvIO/SKE/issues).
+If you have any problems in use, feel free to leave a message in [issue page](https://github.com/xPixv/SKE/issues).

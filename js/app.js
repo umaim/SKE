@@ -40,8 +40,8 @@
             copy: '复制',
             export: '导出',
             clear: '清空',
-            findXKeys: '找到%X%个Key',
-            keysNotFound: '未找到Key',
+            findXKeys: '找到 %X% 个 Key',
+            keysNotFound: '未找到 Key',
             copied: '已复制',
             cleared: '已清空'
         },
@@ -54,7 +54,7 @@
             copy: '複製',
             export: '導出',
             clear: '清空',
-            findXKeys: '找到%X%個Key',
+            findXKeys: '找到 %X% 個 Key',
             keysNotFound: '未找到Key',
             copied: '已復制',
             cleared: '已清空'
@@ -65,9 +65,9 @@
             input: 'Input',
             output: 'Output',
             extract: 'Extract',
-            copy: '&nbsp;&nbsp;Copy&nbsp;&nbsp;&nbsp;',
+            copy: 'Copy',
             export: 'Export',
-            clear: '&nbsp;&nbsp;Clear&nbsp;&nbsp;',
+            clear: 'Clear',
             findXKeys: 'Found %X% Keys',
             keysNotFound: 'Keys not Found',
             copied: 'Copied',
@@ -333,7 +333,7 @@
         config.refreshUI(text);
     };
 
-    if (new Date(Date.now()) > new Date('2018-10-25')) {
+    if (new Date(Date.now()) > new Date('2019-07-09')) {
         document.getElementsByClassName('fixed-action-btn').item(0).remove();
         document.getElementById('ske-anno-modal').remove();
     } else {
@@ -343,7 +343,8 @@
     }
 
     // Register Service Worker
-    if ('serviceWorker' in navigator) {
+    if (false) {
+    //if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('service-worker.js').then(function ( /*registration*/ ) {
             // Registration was successful
             // console.log('ServiceWorker registration successful with scope: ', registration.scope);
