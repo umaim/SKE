@@ -261,10 +261,10 @@
                                 keysWithTitles[key] = title;
                                 isFoundKey = false;
                             }
-                        } else if(line.indexOf('Status: Fail/AlreadyPurchased') > -1){
+                        } else if (line.indexOf('Status: Fail/AlreadyPurchased') > -1) {
                             // ASF AlreadyPurchased
                             let words = line.match(/Key: (\w{5}-\w{5}-\w{5}) \| Status: Fail\/AlreadyPurchased \| Items: \[\d+, (.*)]$/);
-                            if(words.length > 1) {
+                            if (words.length > 1) {
                                 title = words[2];
                                 keysWithTitles[key] = title;
                                 isFoundKey = false;
@@ -343,14 +343,13 @@
     }
 
     // Register Service Worker
-    if (false) {
-    //if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js').then(function ( /*registration*/ ) {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js').then(function ( /*registration*/) {
             // Registration was successful
-            // console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function ( /*err*/ ) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
             // registration failed :(
-            // console.log('ServiceWorker registration failed: ', err);
+            console.log('ServiceWorker registration failed: ', err);
         });
     }
 
