@@ -9,7 +9,7 @@
 - Extract your keys from a large amount of text.
 - Format keys into the `!redeem` command of [ArchiSteamFarm](https://github.com/JustArchiNET/ArchiSteamFarm).
 - Export Keys to a csv file with game titles.
-- Full [PWA](https://developers.google.com/web/progressive-web-apps/) (Progressive Web Apps).
+- Full [PWA](https://developers.google.com/web/progressive-web-apps/)).
 - Can use offline.
 - No third-party web server, full static site hosted on [GitHub Page](https://pages.github.com/).
 - Can use it on smart phone like native apps.
